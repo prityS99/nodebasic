@@ -1,12 +1,16 @@
 const express=require('express')
-const homeController = require('../controllers/homeController');
+
+const homeController=require('../controllers/homeController');
+const contactController=require('../controllers/contactController');
+
 
 const router=express.Router();
 
-
 router.get('/',homeController.index)
 router.get('/about',homeController.about)
-router.get('/contact',homeController.contact)
-
+router.get('/contact', homeController.contact)
+router.get('/contact-us',contactController.contactus)
 
 module.exports=router
+
+

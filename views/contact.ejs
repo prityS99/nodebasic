@@ -1,11 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    /* Header */
+    .header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 15px 30px;
+    }
+
+    .header h2 {
+      font-weight: normal;
+    }
+
+    /* Layout */
+    .container {
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #34495e;
+      min-height: 100vh;
+      padding-top: 20px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #ecf0f1;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-bottom: 1px solid #2c3e50;
+    }
+
+    .sidebar a:hover {
+      background-color: #2c3e50;
+    }
+
+    /* Content */
+    .content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .content h3 {
+      color: rgb(75, 76, 173);
+      margin-bottom: 10px;
+    }
+
+    .contact-card {
+      background-color: #fff;
+      padding: 25px;
+      max-width: 500px;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    .contact-card p {
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .contact-card strong {
+      color: #2c3e50;
+    }
+  </style>
 </head>
+
 <body>
-    <h3 style="color: rgb(75, 76, 173);">Welcome to Contact page</h3>
+
+  <!-- Header -->
+  <div class="header">
+    <h2>Hotel Management Dashboard</h2>
+  </div>
+
+  <div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="/">Dashboard</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="/contact-us">Contact Us</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <h3>Welcome to Contact Page</h3>
+      <p>Reach out to our front desk anytime.</p>
+
+      <div class="contact-card">
+        <p><strong>Hotel Name:</strong> Blue Horizon Hotel</p>
+        <p><strong>Email:</strong> support@bluehorizon.com</p>
+        <p><strong>Phone:</strong> +91 12345 67890</p>
+        <p><strong>Address:</strong> Kolkata, West Bengal</p>
+      </div>
+    </div>
+
+  </div>
+
 </body>
 </html>

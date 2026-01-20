@@ -1,12 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%=title %></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    /* Header */
+    .header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 15px 30px;
+    }
+
+    .header h2 {
+      font-weight: normal;
+    }
+
+    /* Layout */
+    .container {
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #34495e;
+      min-height: 100vh;
+      padding-top: 20px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #ecf0f1;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-bottom: 1px solid #2c3e50;
+    }
+
+    .sidebar a:hover {
+      background-color: #2c3e50;
+    }
+
+    /* Content */
+    .content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .content h3 {
+      color: rgb(56, 46, 7);
+      margin-bottom: 10px;
+    }
+
+    .about-box {
+      background-color: #fff;
+      padding: 25px;
+      max-width: 700px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    .about-box p {
+      margin-bottom: 14px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+  </style>
 </head>
+
 <body>
-    <h3 style="color: rgb(56, 46, 7);">Welcome to about us page</h3>
-     <a href="/contact">Contact</a>
+
+  <!-- Header -->
+  <div class="header">
+    <h2>Hotel Management Dashboard</h2>
+  </div>
+
+  <div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="/">Dashboard</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact</a>
+      <a href="/contact-us">Contact Us</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <h3>Welcome to About Us Page</h3>
+      <p>Learn more about who we are and how we serve our guests.</p>
+
+      <div class="about-box">
+        <p>
+          Founded with a commitment to comfort and care, our hotel has always
+          believed that hospitality is more than a service—it is a tradition.
+        </p>
+        <p>
+          From warm welcomes at the front desk to thoughtfully managed rooms,
+          our team works every day to ensure a smooth and memorable stay.
+        </p>
+        <p>
+          This dashboard helps us manage operations efficiently while keeping
+          the guest experience at the heart of everything we do.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
 </body>
 </html>
+
+
+
