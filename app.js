@@ -17,13 +17,17 @@ app.use(express.static(path.join(__dirname,'public')));
 const homeRoute = require("./app/routes/homeroute");
 app.use(homeRoute);
 
-app.get("/about", (req, res) => {
-  res.send("About Us page");
-});
+const aboutRoute = require("./app/routes/aboutroute")
+app.use(aboutRoute)
 
-app.get("/contact", (req, res) => {
-  res.send("Contact page");
-});
+const blogRoute = require("./app/routes/blogroute");
+app.use(blogRoute);
+
+const contactRoute = require ("./app/routes/contactroute");
+app.use(contactRoute);
+
+const coursesRoute = require("./app/routes/coursesroute")
+app.use(coursesRoute)
 
 
 
