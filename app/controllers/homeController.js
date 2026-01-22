@@ -21,15 +21,15 @@ class HomeController {
     }
   }
 
-  async contact(req, res) {
-    try {
-      res.render("contact", {
-        title: "Contact Us Page",
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  }
+  // async contact(req, res) {
+  //   try {
+  //     res.render("contact", {
+  //       title: "Contact Us Page",
+  //     });
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
 
     async blog(req, res) {
     try {

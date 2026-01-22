@@ -1,8 +1,8 @@
 class ContactController {
   
-  async contactus(req, res) {
+  async contact(req, res) {
     try {
-      res.render("contactus", {
+      res.render("contact", {
         title: "Contact Us page",
       });
     } catch (err) {
