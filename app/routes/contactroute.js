@@ -6,3 +6,5 @@ const router=express.Router();
 router.get('/contact', contactController.contact)
 
 module.exports=router
+
+
