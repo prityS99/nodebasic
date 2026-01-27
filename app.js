@@ -1,12 +1,16 @@
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const port = 3005;
 const ejs = require("ejs");
+const DatabaseConnection =require('./app/config/dbcon')
 
 // console.log(path);
 
 const app = express();
 
+//Database connection //
+DatabaseConnection()
 app.set("view engine", "ejs");
 app.set("views", "views");
 
@@ -26,7 +30,7 @@ app.use(blogRoute);
 const contactRoute = require ("./app/routes/contactroute");
 app.use(contactRoute);
 
-const coursesRoute = require("./app/routes/coursesroute")
+const coursesRoute = require("./app/routes/coursesroute");
 app.use(coursesRoute)
 
 
