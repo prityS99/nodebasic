@@ -14,6 +14,9 @@ DatabaseConnection()
 app.set("view engine", "ejs");
 app.set("views", "views");
 
+//Define JSON//
+app.use(express.json())
+// app.use(express.urlencoded({extended:false}))
 
 app.use(express.static(path.join(__dirname,'public')));
 
@@ -33,7 +36,8 @@ app.use(contactRoute);
 const coursesRoute = require("./app/routes/coursesroute");
 app.use(coursesRoute)
 
-
+const userApiRoute=require('./app/routes/userApiRoute')
+app.use('/api/v1', userApiRoute)
 
 
 app.listen(port, () => {
