@@ -31,7 +31,7 @@ async createUser(req, res){
 
 async getUser(req, res){
     try {
-        const data= await User.find()
+        const data= await User.find({name:"Prity"}) //ODM
          return res.status(201).json({
             success:true,
             message:"User List",
